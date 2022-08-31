@@ -1,2 +1,0 @@
-module NewTestHelper
-end
