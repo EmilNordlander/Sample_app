@@ -13,13 +13,17 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded
 <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 <ul class="nav navbar-nav navbar-right"> 
-<li><%= link_to "Home", root_path %></li>
-<li><%= link_to "Help",  help_path %></li> 
+<li><%= link_to "Hem", root_path %></li>
+<li><%= link_to "Hjälp",  help_path %></li> 
+
 
 <% if logged_in? %>
-<li><%= link_to "Profile", current_user %></li>
-<li><%= link_to "Settings", edit_user_path(current_user) %></li>
-<li><%= link_to "Log out", logout_path, method: :delete %></li>
+
+<li><%= link_to "Användare", users_path %></li>
+
+<li><%= link_to "Profil", current_user %></li>
+<li><%= link_to "Inställningar", edit_user_path(current_user) %></li>
+<li><%= link_to "Logga ut", logout_path, method: :delete %></li>
 
 </ul>
 
@@ -27,7 +31,7 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded
 
 <% else %>
 
-<li><%= link_to "Log in", login_path %></li>
+<li><%= link_to "Logga in", login_path %></li>
 <% end %>
 </ul> 
 </nav>

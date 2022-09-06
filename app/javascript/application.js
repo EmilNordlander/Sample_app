@@ -3,6 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 require("jquery") 
 import "bootstrap"
-  
+require ("jquery_ujs")
 
 // import "importmaps-rails"

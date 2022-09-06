@@ -12,6 +12,13 @@ gem 'rails-controller-testing'
 
 gem 'bcrypt', '3.1.13'
 
+gem 'faker',  '2.11.0'
+
+gem 'fixture_builder', '~> 0.5.2'
+
+gem 'will_paginate',              '3.3.0'
+gem 'bootstrap-will_paginate',    '1.0.0'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
