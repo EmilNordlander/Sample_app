@@ -10,7 +10,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 def setup
 @user = users(:emil)
 end
-=end
+
 test "login with invalid information" do
   get login_path
   assert_template 'sessions/new'

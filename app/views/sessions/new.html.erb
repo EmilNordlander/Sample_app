@@ -4,10 +4,14 @@
 <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 <%= f.label :Mail %>
 <%= f.email_field :email, class: 'form-control' %>
+
 <%= f.label :Lösenord %>
 <%= f.password_field :password, class: 'form-control' %>
+
 <%= f.submit "Logga in", class: "btn btn-primary" %> 
+
 <% end %>
+
 <p>Ny användare? <%= link_to "Skapa ett konto", signup_path %></p> 
 </div>
 </div>
