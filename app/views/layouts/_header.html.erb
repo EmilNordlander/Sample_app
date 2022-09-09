@@ -1,6 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-inverse"> 
 <div class="container">
-<%= link_to "sample app", root_path, id: "logo" %> 
+<%= link_to image_tag("Twitter.png", alt: "Twitter", width: "30") %>
+<%= link_to "Twitter", root_path, id: "logo" %> 
 
 <nav>
 <div class="navbar-header">
@@ -19,19 +20,17 @@ data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded
 
 <% if logged_in? %>
 
-<li><%= link_to "Användare", users_path %></li>
+    <li><%= link_to "Användare", users_path %></li>
 
-<li><%= link_to "Profil", current_user %></li>
-<li><%= link_to "Inställningar", edit_user_path(current_user) %></li>
-<li><%= link_to "Logga ut", logout_path, method: :delete %></li>
+    <li><%= link_to "Profil", current_user %></li>
+    <li><%= link_to "Inställningar", edit_user_path(current_user) %></li>
+    <li><%= link_to "Logga ut", logout_path, method: :delete %></li>
 
 </ul>
 
-
-
 <% else %>
 
-<li><%= link_to "Logga in", login_path %></li>
+    <li><%= link_to "Logga in", login_path %></li>
 <% end %>
 </ul> 
 </nav>

@@ -1,12 +1,15 @@
+<br><br><br>
 <% if logged_in? %>
 <div class="center jumbotron"> <h1>Välkommen tillbaka! </h1>
 
-<h2>
+<h4>
 <% if current_user.admin? %>
+<br><br>
 Du är administrator
+
  <%end%>
 
-</h2>
+</h4>
 <br>
 <%= link_to "Gå till din profil", current_user, class: "btn btn-lg btn-primary" %> 
 </div>
@@ -37,7 +40,7 @@ Du är administrator
 <div class="center jumbotron"> <h1>Välkommen! </h1>
 
 <h2>
-Skapa ett konto för att kunna följa dina vänner och posta inlägg!
+Logga in eller skapa ett konto för att kunna följa dina vänner och göra inlägg!
 </h2>
 
 <br>
