@@ -1,58 +1,52 @@
 <br><br><br>
 <% if logged_in? %>
-<div class="center jumbotron"> <h1>Välkommen tillbaka! </h1>
+    <div class="center jumbotron"> <h1>Välkommen tillbaka! </h1>
 
-<h4>
-<% if current_user.admin? %>
-<br><br>
-<li>Du är administrator</li>
+    
+        <% if current_user.admin? %>
+            <h4>
+            <br><br>
+            <li>Du är administrator</li>
+            </h4>
+        <%end%>
 
- <%end%>
+        
+        <br>
+        <%= link_to "Gå till din profil", current_user, class: "btn btn-lg btn-primary" %> 
+        </div>
+        <div class="row">
+            <aside class="col-md-4">
 
-</h4>
-<br>
-<%= link_to "Gå till din profil", current_user, class: "btn btn-lg btn-primary" %> 
-</div>
+                <section class="user_info">
+                    <%= render 'shared/user_info' %>
+                </section>
 
-<div class="row">
-<aside class="col-md-4">
+                <section class="stats">
+                    <%= render 'shared/stats' %>
+                </section>
 
-<section class="user_info">
-<%= render 'shared/user_info' %>
-</section>
+                <section class="micropost_form">
+                    <%=render 'shared/micropost_form' %>
+                </section>
+            </aside>
 
-<section class="stats">
-<%= render 'shared/stats' %>
-</section>
-
-<section class="micropost_form">
-<%=render 'shared/micropost_form' %>
-</section>
-</aside>
-
-<div class = "col-md-8">
-    <h3> Inlägg </h3>
-    <%= render 'shared/feed' %>
-</div>
-</div>
+        <div class = "col-md-8">
+            <h3> Inlägg </h3>
+            <%= render 'shared/feed' %>
+        </div>
+    </div>
 
 <% else %>
-<div class="center jumbotron"> <h1>Välkommen! </h1>
+    <div class="center jumbotron"> <h1>Välkommen! </h1>
 
-<h2>
-Logga in eller skapa ett konto för att kunna följa dina vänner och göra inlägg!
-</h2>
-
-<br>
-
-<%= link_to "Skapa ett konto", signup_path, class: "btn btn-lg btn-primary" %> 
-</div>
-<br><br><br>
-
-
+        <h2>Logga in eller skapa ett konto för att kunna följa dina vänner och göra inlägg!</h2>
+        <br>
+        <%= link_to "Skapa ett konto", signup_path, class: "btn btn-lg btn-primary" %> 
+    </div>
+    <br><br><br>
 
 <%end%>
 <div class="center">
-<%= link_to image_tag("tält.jpg", alt: "Tält", width: "800") %>
+    <%= link_to image_tag("tält.jpg", alt: "Tält", width: "800") %>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br>

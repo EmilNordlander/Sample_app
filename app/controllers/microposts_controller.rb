@@ -5,7 +5,7 @@ before_action :correct_user,   only: :destroy
 
     def create 
         @micropost = current_user.microposts.build(micropost_params)
-        @micropost.image.attach(params[:micropost][:image])
+        
         
         if @micropost.save
             flash[:success] = "Inlägg publicerad"
@@ -23,7 +23,7 @@ before_action :correct_user,   only: :destroy
     end 
 
     def micropost_params
-        params.require(:micropost).permit(:content, :image)
+        params.require(:micropost).permit(:content)
     end
 
     def correct_user
